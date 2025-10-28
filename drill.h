@@ -4,7 +4,7 @@
 //1T - sand, scrap / 2T - copper, lead / 3T - coal / 4T - titanium / 5T - thorium
 //가속배수: 레이저 2.56, 압공 3.24
 
-double OneDrill(int d_tier), TwoDrill(int d_tier), ThreeDrill(int d_tier), FourDrill(int d_tier), FiveDrill(int d_tier);
+double OneDrill(int d_tier), TwoDrill(int d_tier), ThreeDrill(int d_tier), FourDrill(int d_tier), FiveDrill(int d_tier), Pump(int p_tier);
 
 double OneDrill(int d_tier) { //1티어 자원 드릴별 채굴량
 	if (d_tier == 1) //기계드릴
@@ -13,7 +13,7 @@ double OneDrill(int d_tier) { //1티어 자원 드릴별 채굴량
 		return 0.6;
 	else if (d_tier == 3) //레이저드릴
 		return 1.92;
-	else if (d_tier == 4) //압공드릴
+	else if (d_tier == 4)//압공드릴
 		return 3.42;
 }
 
@@ -59,4 +59,13 @@ double FiveDrill(int d_tier) {
 		return 1.12;
 	else if (d_tier == 4)
 		return 2.0;
+}
+
+double Pump(int p_tier) {
+	if (p_tier == 1) //기계식
+		return 7.0;
+	else if (p_tier == 2) //동력
+		return 48.0;
+	else if (p_tier == 3) //충격
+		return 118.8;
 }
