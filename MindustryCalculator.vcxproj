@@ -125,6 +125,7 @@
   <ItemGroup>
     <ClCompile Include="main.c">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</ExcludedFromBuild>
+      <DisableSpecificWarnings Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">4715</DisableSpecificWarnings>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

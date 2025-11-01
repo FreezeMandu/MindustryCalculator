@@ -2,14 +2,18 @@
 #include "drill.h" //드릴과 펌프의 출력량 반환
 #include "factory.h" //요구량 계산 & 출력
 
-int Fac(), level_one();
+int Fac();
 
 int main() {
-	printf("Mindustry 공장 비율 계산기 (단위: /초)\n\n");
-	int one = 0;
+	printf("=== Mindustry 공장 비율 계산기 ===\n");
+	printf("1. 별 다른 표기가 없으면 필요량 입출력 단위는 '/초' 입니다\n2. 정수만 입력하세요. 무한루프 들어가면 전 모릅니다.\n\n"); //2. 야매 if문 넣고 에러 무시해야 하나?
+	int one;
 
 	while (1) {
-		one = level_one();
+		printf("[메인] 범주 선택 & 종료\n");
+		printf("1. 공장\n2. 발전기(예정)\n3. 프로그램 종료\n>> ");
+		scanf_s("%d", &one);
+		printf("\n\n");
 
 		if (one == 3)
 			break;
@@ -19,22 +23,6 @@ int main() {
 		}
 	}
 	return 0;
-}
-
-int level_one() {
-	int one;
-
-	while (1) {
-		printf("[메인] 범주 선택 & 종료\n");
-		printf("1. 공장\n2. 발전기(예정)\n3. 프로그램 종료\n>> ");
-		scanf_s("%d", &one);
-		printf("\n\n");
-
-		//정수형 검사 가능한지 검색
-		//안되면 반복문에서 빼야함
-		break;
-	}
-
 }
 
 int Fac() {
