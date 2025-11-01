@@ -81,3 +81,39 @@ void silicon(int ea) {
 	}
 	printf("\n");
 }
+
+void silCruc(int ea) {
+	printf("[실리콘 도가니]\n");
+
+	double coal = 2.66, sand = 4.0, pyra = 0.66;
+	printf("석탄 필요량 : %.3lf\n모래 필요량 : %.3lf\n파이라 필요량 : %.3lf\n\n", coal * ea, sand * ea, pyra * ea);
+
+	printf("{석탄 드릴}\n");
+	for (int i = 1; i <= 4; i++) {
+		double drill = (ea * coal) / OneDrill(i); //드릴 수 저장
+
+		printf("%d티어 드릴 갯수: %.3lf / ", i, drill);
+		if (i <= 3) //3티어까지 가속 배수 같음
+			printf("물 가속시 : %.3lf", drill / 2.56);
+		else if (i == 4)
+			printf("물 가속시 : %.3lf", drill / 3.24);
+		printf("\n");
+	}
+	printf("\n");
+
+	printf("{모래 드릴}\n");
+	for (int i = 1; i <= 4; i++) {
+		double drill = (ea * sand) / OneDrill(i); //드릴 수 저장
+
+		printf("%d티어 드릴 갯수: %.3lf / ", i, drill);
+		if (i <= 3) //3티어까지 가속 배수 같음
+			printf("물 가속시 : %.3lf", drill / 2.56);
+		else if (i == 4)
+			printf("물 가속시 : %.3lf", drill / 3.24);
+		printf("\n");
+	}
+	printf("\n");
+
+	double mixer = 0.75;
+	printf("파이라 공장 갯수 : %.3lf\n\n", (pyra * ea) / mixer);
+}
