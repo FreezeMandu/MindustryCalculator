@@ -41,18 +41,10 @@ int Fac() {
 		printf("\n");
 
 		switch (two) {
-		case 1:
-			g_press(ea);
-			break;
-		case 2:
-			m_press(ea);
-			break;
-		case 3:
-			silicon(ea);
-			break;
-		case 4:
-			silCruc(ea);
-			break;
+		case 1: g_press(ea); break;
+		case 2: m_press(ea); break;
+		case 3: silicon(ea); break;
+		case 4: silCruc(ea); break;
 		}
 		printf("========== ³¡ ==========\n");
 	}
