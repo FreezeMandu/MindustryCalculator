@@ -117,3 +117,62 @@ void silCruc(int ea) {
 	double mixer = 0.75;
 	printf("파이라 공장 갯수 : %.3lf\n\n", (pyra * ea) / mixer);
 }
+
+void kiln(int ea) {
+	printf("[가마]\n");
+
+	double lead = 2.0, sand = 2.0;
+	printf("납 필요량 : %.3lf\n모래 필요량 : %.3lf\n\n", lead * ea, sand * ea);
+
+	printf("{납 드릴}\n");
+	for (int i = 1; i <= 4; i++) {
+		double drill = (ea * lead) / OneDrill(i); //드릴 수 저장
+
+		printf("%d티어 드릴 갯수: %.3lf / ", i, drill);
+		if (i <= 3) //3티어까지 가속 배수 같음
+			printf("물 가속시 : %.3lf", drill / 2.56);
+		else if (i == 4)
+			printf("물 가속시 : %.3lf", drill / 3.24);
+		printf("\n");
+	}
+	printf("\n");
+
+	printf("{모래 드릴}\n");
+	for (int i = 1; i <= 4; i++) {
+		double drill = (ea * sand) / OneDrill(i); //드릴 수 저장
+
+		printf("%d티어 드릴 갯수: %.3lf / ", i, drill);
+		if (i <= 3) //3티어까지 가속 배수 같음
+			printf("물 가속시 : %.3lf", drill / 2.56);
+		else if (i == 4)
+			printf("물 가속시 : %.3lf", drill / 3.24);
+		printf("\n");
+	}
+	printf("\n");
+}
+
+void plasta(int ea) {
+	printf("[플라스터늄 압축기]\n");
+
+	double oil = 15.0, sand = 2.0;
+	printf("석유 필요량 : %.3lf\n티타늄 필요량 : %.3lf\n\n", oil * ea, sand * ea);
+
+	for (int i = 1; i <= 3; i++) {
+		double pump = (ea * oil) / Pump(i);
+		printf("%d티어 펌프 갯수: %.3lf\n", i, pump);
+	}
+	printf("\n");
+
+	printf("{티타늄 드릴}\n");
+	for (int i = 2; i <= 4; i++) {
+		double drill = (ea * sand) / OneDrill(i); //드릴 수 저장
+
+		printf("%d티어 드릴 갯수: %.3lf / ", i, drill);
+		if (i <= 3) //3티어까지 가속 배수 같음
+			printf("물 가속시 : %.3lf", drill / 2.56);
+		else if (i == 4)
+			printf("물 가속시 : %.3lf", drill / 3.24);
+		printf("\n");
+	}
+	printf("\n");
+}

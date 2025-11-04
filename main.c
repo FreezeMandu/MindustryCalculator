@@ -27,9 +27,11 @@ int main() {
 
 int Fac() {
 	int two, ea;
+	char end;
 	while (1) {
 		printf("[공장] 선택\n");
-		printf("1. 흑연 압축기\n2. 대형 흑연 압축기\n3. 실리콘 제련소\n4. 실리콘 도가니");
+		printf("1. 흑연 압축기\n2. 대형 흑연 압축기\n3. 실리콘 제련소\n4. 실리콘 도가니\n5. 가마\n6. 플라스터늄 압축기\n7. 메타 제조기\n8. 설금 제련소\n9. 냉각수 혼합기\n");
+		printf("10. 파이라타이트 혼합기\n11. 폭발물 혼합기\n12. 융해기\n13. 광재 분리기\n14. 광재 분해기\n15. 포자 압축기\n16. 분쇄기\n17. 석탄 정제기");
 		printf("\n99. 메인으로 나가기\n>> ");
 		scanf_s("%d", &two);
 		printf("\n");
@@ -45,8 +47,12 @@ int Fac() {
 		case 2: m_press(ea); break;
 		case 3: silicon(ea); break;
 		case 4: silCruc(ea); break;
+		case 5: kiln(ea); break;
+		case 6: plasta(ea); break;
 		}
-		printf("========== 끝 ==========\n");
+		getchar();
+		printf("========== Enter를 눌러 끝내기 ==========\n");
+		scanf_s("%c", &end, 1);
 	}
 }
 
