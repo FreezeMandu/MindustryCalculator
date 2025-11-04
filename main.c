@@ -50,8 +50,9 @@ int Fac() {
 		case 5: kiln(ea); break;
 		case 6: plasta(ea); break;
 		}
+
 		getchar();
-		printf("========== Enter를 눌러 끝내기 ==========\n");
+		printf("========== Enter를 눌러 넘어가기 ==========\n");
 		scanf_s("%c", &end, 1);
 	}
 }
