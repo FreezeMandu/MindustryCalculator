@@ -54,7 +54,6 @@ int Fac() {
 			cnt++;
 		}
 		menu = atoi(scan);
-		printf("[menu] %d\n", menu);
 		printf("\n");
 
 		if (menu == 99)
