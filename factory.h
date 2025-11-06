@@ -1,6 +1,5 @@
 #pragma once
 //공장 갯수를 미리 입력받은 상태
-void g_press(int ea), m_press(int ea);
 
 void g_press(int ea) {
 	printf("[흑연 압축기]\n");

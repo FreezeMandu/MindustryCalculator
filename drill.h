@@ -4,7 +4,7 @@
 //1T - sand, scrap / 2T - copper, lead / 3T - coal / 4T - titanium / 5T - thorium
 //가속배수: 레이저 2.56, 압공 3.24
 
-double OneDrill(int d_tier), TwoDrill(int d_tier), ThreeDrill(int d_tier), FourDrill(int d_tier), FiveDrill(int d_tier), Pump(int p_tier);
+double OneDrill(int), TwoDrill(int), ThreeDrill(int), FourDrill(int), FiveDrill(int), Pump(int);
 
 double OneDrill(int d_tier) { //1티어 자원 드릴별 채굴량
 	if (d_tier == 1) //기계드릴
