@@ -71,6 +71,7 @@ int Fac() {
 		case 6: plasta(ea); break;
 		case 7: phase(ea); break;
 		case 8: surge(ea); break;
+		case 9: cryo(ea); break;
 		}
 
 		getchar();

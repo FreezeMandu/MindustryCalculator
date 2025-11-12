@@ -41,7 +41,7 @@ void m_press(int ea) {
 	printf("\n");
 
 	printf("물 추출기 갯수: %.3lf\n", (ea * water) / 6.6);
-	for (int i = 1; i <= 3; i++) {
+	for (int i = 1; i <= 4; i++) {
 		double pump = (ea * water) / Pump(i);
 		printf("%d티어 펌프 갯수: %.3lf\n", i, pump);
 	}
@@ -153,8 +153,8 @@ void kiln(int ea) {
 void plasta(int ea) {
 	printf("[플라스터늄 압축기]\n");
 
-	double oil = 15.0, sand = 2.0;
-	printf("석유 필요량 : %.3lf\n티타늄 필요량 : %.3lf\n\n", oil * ea, sand * ea);
+	double oil = 15.0, tita = 2.0;
+	printf("석유 필요량 : %.3lf\n티타늄 필요량 : %.3lf\n\n", oil * ea, tita * ea);
 
 	for (int i = 1; i <= 3; i++) {
 		double pump = (ea * oil) / Pump(i);
@@ -164,7 +164,7 @@ void plasta(int ea) {
 
 	printf("{티타늄 드릴}\n");
 	for (int i = 2; i <= 4; i++) {
-		double drill = (ea * sand) / OneDrill(i);
+		double drill = (ea * tita) / OneDrill(i);
 
 		printf("%d티어 드릴 갯수: %.3lf / ", i, drill);
 		if (i <= 3)
@@ -184,7 +184,7 @@ void phase(int ea) {
 
 	printf("{토륨 드릴}\n");
 	for (int i = 3; i <= 4; i++) {
-		double drill = (ea * sand) / OneDrill(i);
+		double drill = (ea * tho) / OneDrill(i);
 
 		printf("%d티어 드릴 갯수: %.3lf / ", i, drill);
 		if (i <= 3)
@@ -252,7 +252,35 @@ void surge(int ea) {
 			printf("물 가속시 : %.3lf", drill / 3.24);
 		printf("\n");
 	}
+	printf("\n");
 
 	printf("실리콘 공장 갯수 : %.3lf\n", (sil * ea) / 1.5);
+	printf("\n");
+}
+
+void cryo(int ea) {
+	printf("[냉각수 혼합기]\n");
+
+	double tita = 0.5, water = 12.0;
+	printf("티타늄 필요량 : %.3lf\n물 필요량 : %.3lf\n\n", tita * ea, water * ea);
+
+	printf("{티타늄 드릴}\n");
+	for (int i = 2; i <= 4; i++) {
+		double drill = (ea * tita) / OneDrill(i);
+
+		printf("%d티어 드릴 갯수: %.3lf / ", i, drill);
+		if (i <= 3)
+			printf("물 가속시 : %.3lf", drill / 2.56);
+		else if (i == 4)
+			printf("물 가속시 : %.3lf", drill / 3.24);
+		printf("\n");
+	}
+	printf("\n");
+
+	printf("물 추출기 갯수: %.3lf\n", (ea * water) / 6.6);
+	for (int i = 1; i <= 3; i++) {
+		double pump = (ea * water) / Pump(i);
+		printf("%d티어 펌프 갯수: %.3lf\n", i, pump);
+	}
 	printf("\n");
 }
