@@ -69,6 +69,8 @@ int Fac() {
 		case 4: silCruc(ea); break;
 		case 5: kiln(ea); break;
 		case 6: plasta(ea); break;
+		case 7: phase(ea); break;
+		case 8: surge(ea); break;
 		}
 
 		getchar();

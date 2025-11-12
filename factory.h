@@ -69,10 +69,10 @@ void silicon(int ea) {
 
 	printf("{모래 드릴}\n");
 	for (int i = 1; i <= 4; i++) {
-		double drill = (ea * sand) / OneDrill(i); //드릴 수 저장
+		double drill = (ea * sand) / OneDrill(i);
 
 		printf("%d티어 드릴 갯수: %.3lf / ", i, drill);
-		if (i <= 3) //3티어까지 가속 배수 같음
+		if (i <= 3)
 			printf("물 가속시 : %.3lf", drill / 2.56);
 		else if (i == 4)
 			printf("물 가속시 : %.3lf", drill / 3.24);
@@ -89,10 +89,10 @@ void silCruc(int ea) {
 
 	printf("{석탄 드릴}\n");
 	for (int i = 1; i <= 4; i++) {
-		double drill = (ea * coal) / OneDrill(i); //드릴 수 저장
+		double drill = (ea * coal) / OneDrill(i);
 
 		printf("%d티어 드릴 갯수: %.3lf / ", i, drill);
-		if (i <= 3) //3티어까지 가속 배수 같음
+		if (i <= 3)
 			printf("물 가속시 : %.3lf", drill / 2.56);
 		else if (i == 4)
 			printf("물 가속시 : %.3lf", drill / 3.24);
@@ -102,10 +102,10 @@ void silCruc(int ea) {
 
 	printf("{모래 드릴}\n");
 	for (int i = 1; i <= 4; i++) {
-		double drill = (ea * sand) / OneDrill(i); //드릴 수 저장
+		double drill = (ea * sand) / OneDrill(i);
 
 		printf("%d티어 드릴 갯수: %.3lf / ", i, drill);
-		if (i <= 3) //3티어까지 가속 배수 같음
+		if (i <= 3)
 			printf("물 가속시 : %.3lf", drill / 2.56);
 		else if (i == 4)
 			printf("물 가속시 : %.3lf", drill / 3.24);
@@ -125,10 +125,10 @@ void kiln(int ea) {
 
 	printf("{납 드릴}\n");
 	for (int i = 1; i <= 4; i++) {
-		double drill = (ea * lead) / OneDrill(i); //드릴 수 저장
+		double drill = (ea * lead) / OneDrill(i);
 
 		printf("%d티어 드릴 갯수: %.3lf / ", i, drill);
-		if (i <= 3) //3티어까지 가속 배수 같음
+		if (i <= 3)
 			printf("물 가속시 : %.3lf", drill / 2.56);
 		else if (i == 4)
 			printf("물 가속시 : %.3lf", drill / 3.24);
@@ -138,10 +138,10 @@ void kiln(int ea) {
 
 	printf("{모래 드릴}\n");
 	for (int i = 1; i <= 4; i++) {
-		double drill = (ea * sand) / OneDrill(i); //드릴 수 저장
+		double drill = (ea * sand) / OneDrill(i);
 
 		printf("%d티어 드릴 갯수: %.3lf / ", i, drill);
-		if (i <= 3) //3티어까지 가속 배수 같음
+		if (i <= 3)
 			printf("물 가속시 : %.3lf", drill / 2.56);
 		else if (i == 4)
 			printf("물 가속시 : %.3lf", drill / 3.24);
@@ -164,14 +164,95 @@ void plasta(int ea) {
 
 	printf("{티타늄 드릴}\n");
 	for (int i = 2; i <= 4; i++) {
-		double drill = (ea * sand) / OneDrill(i); //드릴 수 저장
+		double drill = (ea * sand) / OneDrill(i);
 
 		printf("%d티어 드릴 갯수: %.3lf / ", i, drill);
-		if (i <= 3) //3티어까지 가속 배수 같음
+		if (i <= 3)
 			printf("물 가속시 : %.3lf", drill / 2.56);
 		else if (i == 4)
 			printf("물 가속시 : %.3lf", drill / 3.24);
 		printf("\n");
 	}
+	printf("\n");
+}
+
+void phase(int ea) {
+	printf("[메타 제조기]\n");
+
+	double tho = 2.0, sand = 5.0;
+	printf("토륨 필요량 : %.3lf\n모래 필요량 : %.3lf\n\n", tho * ea, sand * ea);
+
+	printf("{토륨 드릴}\n");
+	for (int i = 3; i <= 4; i++) {
+		double drill = (ea * sand) / OneDrill(i);
+
+		printf("%d티어 드릴 갯수: %.3lf / ", i, drill);
+		if (i <= 3)
+			printf("물 가속시 : %.3lf", drill / 2.56);
+		else if (i == 4)
+			printf("물 가속시 : %.3lf", drill / 3.24);
+		printf("\n");
+	}
+	printf("\n");
+
+	printf("{모래 드릴}\n");
+	for (int i = 1; i <= 4; i++) {
+		double drill = (ea * sand) / OneDrill(i);
+
+		printf("%d티어 드릴 갯수: %.3lf / ", i, drill);
+		if (i <= 3)
+			printf("물 가속시 : %.3lf", drill / 2.56);
+		else if (i == 4)
+			printf("물 가속시 : %.3lf", drill / 3.24);
+		printf("\n");
+	}
+	printf("\n");
+}
+
+void surge(int ea) {
+	printf("[설금 제련소]\n");
+
+	double cop = 2.4, lead = 3.2, tita = 1.6, sil = 2.4;
+	printf("구리 필요량 : %.3lf\n납 필요량 : %.3lf\n티타늄 필요량 : %.3lf\n실리콘 필요량 : %.3lf\n\n", cop * ea, lead * ea, tita * ea, sil * ea);
+
+	printf("{구리 드릴}\n");
+	for (int i = 1; i <= 4; i++) {
+		double drill = (ea * cop) / OneDrill(i);
+
+		printf("%d티어 드릴 갯수: %.3lf / ", i, drill);
+		if (i <= 3)
+			printf("물 가속시 : %.3lf", drill / 2.56);
+		else if (i == 4)
+			printf("물 가속시 : %.3lf", drill / 3.24);
+		printf("\n");
+	}
+	printf("\n");
+
+	printf("{납 드릴}\n");
+	for (int i = 1; i <= 4; i++) {
+		double drill = (ea * lead) / OneDrill(i);
+
+		printf("%d티어 드릴 갯수: %.3lf / ", i, drill);
+		if (i <= 3)
+			printf("물 가속시 : %.3lf", drill / 2.56);
+		else if (i == 4)
+			printf("물 가속시 : %.3lf", drill / 3.24);
+		printf("\n");
+	}
+	printf("\n");
+
+	printf("{티타늄 드릴}\n");
+	for (int i = 2; i <= 4; i++) {
+		double drill = (ea * tita) / OneDrill(i);
+
+		printf("%d티어 드릴 갯수: %.3lf / ", i, drill);
+		if (i <= 3)
+			printf("물 가속시 : %.3lf", drill / 2.56);
+		else if (i == 4)
+			printf("물 가속시 : %.3lf", drill / 3.24);
+		printf("\n");
+	}
+
+	printf("실리콘 공장 갯수 : %.3lf\n", (sil * ea) / 1.5);
 	printf("\n");
 }
