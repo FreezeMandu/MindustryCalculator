@@ -7,7 +7,7 @@ int Fac();
 
 int main() {
 	printf("=== Mindustry 공장 비율 계산기 ===\n");
-	printf("1. 별 다른 표기가 없으면 필요량 입출력 단위는 '/초' 입니다\n\n");
+	printf("1. 별 다른 표기가 없으면 필요량 입출력 단위는 '/초' 입니다\n2. 제작자 깃허브 https://github.com/FreezeMandu/MindustryCalculator\n\n");
 	int menu;
 	char one[10], scan[10] = { 0 };
 

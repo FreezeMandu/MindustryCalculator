@@ -41,7 +41,7 @@ void m_press(int ea) {
 	printf("\n");
 
 	printf("¹° ÃßÃâ±â °¹¼ö: %.3lf\n", (ea * water) / 6.6);
-	for (int i = 1; i <= 4; i++) {
+	for (int i = 1; i <= 3; i++) {
 		double pump = (ea * water) / Pump(i);
 		printf("%dÆ¼¾î ÆßÇÁ °¹¼ö: %.3lf\n", i, pump);
 	}
