@@ -9,7 +9,7 @@ void g_press(int ea) {
 
 	printf("{석탄 드릴}\n");
 	for (int i = 1; i <= 4; i++) {
-		double drill = (ea * coal) / OneDrill(i); //드릴 수 저장
+		double drill = (ea * coal) / ThreeDrill(i); //드릴 수 저장
 
 		printf("%d티어 드릴 갯수: %.3lf / ", i, drill);
 		if (i <= 3) //3티어까지 가속 배수 같음
@@ -29,7 +29,7 @@ void m_press(int ea) {
 
 	printf("{석탄 드릴}\n");
 	for (int i = 1; i <= 4; i++) {
-		double drill = (ea * coal) / OneDrill(i); //드릴 수 저장
+		double drill = (ea * coal) / ThreeDrill(i); //드릴 수 저장
 
 		printf("%d티어 드릴 갯수: %.3lf / ", i, drill);
 		if (i <= 3) //3티어까지 가속 배수 같음
@@ -56,7 +56,7 @@ void silicon(int ea) {
 
 	printf("{석탄 드릴}\n");
 	for (int i = 1; i <= 4; i++) {
-		double drill = (ea * coal) / OneDrill(i); //드릴 수 저장
+		double drill = (ea * coal) / ThreeDrill(i); //드릴 수 저장
 
 		printf("%d티어 드릴 갯수: %.3lf / ", i, drill);
 		if (i <= 3) //3티어까지 가속 배수 같음
@@ -89,7 +89,7 @@ void silCruc(int ea) {
 
 	printf("{석탄 드릴}\n");
 	for (int i = 1; i <= 4; i++) {
-		double drill = (ea * coal) / OneDrill(i);
+		double drill = (ea * coal) / ThreeDrill(i);
 
 		printf("%d티어 드릴 갯수: %.3lf / ", i, drill);
 		if (i <= 3)
@@ -125,7 +125,7 @@ void kiln(int ea) {
 
 	printf("{납 드릴}\n");
 	for (int i = 1; i <= 4; i++) {
-		double drill = (ea * lead) / OneDrill(i);
+		double drill = (ea * lead) / TwoDrill(i);
 
 		printf("%d티어 드릴 갯수: %.3lf / ", i, drill);
 		if (i <= 3)
@@ -164,7 +164,7 @@ void plasta(int ea) {
 
 	printf("{티타늄 드릴}\n");
 	for (int i = 2; i <= 4; i++) {
-		double drill = (ea * tita) / OneDrill(i);
+		double drill = (ea * tita) / FourDrill(i);
 
 		printf("%d티어 드릴 갯수: %.3lf / ", i, drill);
 		if (i <= 3)
@@ -184,7 +184,7 @@ void phase(int ea) {
 
 	printf("{토륨 드릴}\n");
 	for (int i = 3; i <= 4; i++) {
-		double drill = (ea * tho) / OneDrill(i);
+		double drill = (ea * tho) / FiveDrill(i);
 
 		printf("%d티어 드릴 갯수: %.3lf / ", i, drill);
 		if (i <= 3)
@@ -217,7 +217,7 @@ void surge(int ea) {
 
 	printf("{구리 드릴}\n");
 	for (int i = 1; i <= 4; i++) {
-		double drill = (ea * cop) / OneDrill(i);
+		double drill = (ea * cop) / TwoDrill(i);
 
 		printf("%d티어 드릴 갯수: %.3lf / ", i, drill);
 		if (i <= 3)
@@ -230,7 +230,7 @@ void surge(int ea) {
 
 	printf("{납 드릴}\n");
 	for (int i = 1; i <= 4; i++) {
-		double drill = (ea * lead) / OneDrill(i);
+		double drill = (ea * lead) / TwoDrill(i);
 
 		printf("%d티어 드릴 갯수: %.3lf / ", i, drill);
 		if (i <= 3)
@@ -243,7 +243,7 @@ void surge(int ea) {
 
 	printf("{티타늄 드릴}\n");
 	for (int i = 2; i <= 4; i++) {
-		double drill = (ea * tita) / OneDrill(i);
+		double drill = (ea * tita) / FourDrill(i);
 
 		printf("%d티어 드릴 갯수: %.3lf / ", i, drill);
 		if (i <= 3)
@@ -266,7 +266,7 @@ void cryo(int ea) {
 
 	printf("{티타늄 드릴}\n");
 	for (int i = 2; i <= 4; i++) {
-		double drill = (ea * tita) / OneDrill(i);
+		double drill = (ea * tita) / FourDrill(i);
 
 		printf("%d티어 드릴 갯수: %.3lf / ", i, drill);
 		if (i <= 3)
